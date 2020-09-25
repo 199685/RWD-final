@@ -1,0 +1,36 @@
+//margin
+$margin: 30px;
+$ms: $margin/1.5;
+$md: $margin;
+$mb: $margin * 2;
+//fize
+$fize: 16px;
+$fs: 12px;
+$fd: $fize * 1;
+$fb: $fize * 2;
+$fb1: $fize * 3;
+//padding
+$padding: 10px;
+$ps: $padding;
+$pd: $padding * 2;
+$pb: $padding * 3;
+//color
+$primary: #3d1101;
+$primary1: #ffffff;
+$accent: rgba(61, 17, 0, 0.75);
+$accent1: #ff5e45;
+$accent2: #efe9e7;
+$accent3: #4a4a4a;
+$accent4: #fafafa;
+$accent5: wheat;
+//media
+$pad: 768px;
+$smb: 767px;
+$sm: 414px;
+$sml: 375px;
+//font-family
+$ffm1: 'MicrosoftJhengHeiRegular';
+$ffm2: Roboto-Light;
+$ffm3: NotoSansCJKtc-Black;
+//text-decoration
+$td1: none;

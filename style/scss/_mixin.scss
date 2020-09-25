@@ -1,0 +1,34 @@
+// @media
+@mixin pad {
+  @media (max-width: $pad) {
+    @content;
+  }
+}
+
+@mixin smb {
+  @media (max-width: $smb) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin sml {
+  @media (max-width: $sml) {
+    @content;
+  }
+}
+
+@mixin logo-h1($width, $height, $url) {
+  width: $width;
+  height: $height;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: url($url) no-repeat;
+}
