@@ -1,0 +1,227 @@
+.present {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    text-align: center;
+    margin-bottom: $mb;
+
+    .present-title {
+        margin-bottom: $md;
+
+        h3 {
+            line-height: 2;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &::before {
+                content: " ";
+                display: block;
+                width: 100px;
+                height: 2px;
+                background: #a09999;
+                position: relative;
+                top: 40px;
+                left: -150px;
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 100px;
+                height: 2px;
+                background: #a09999;
+                position: relative;
+                top: -40px;
+                right: -150px;
+
+            }
+        }
+    }
+
+    .present-item {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            width: 30.333%;
+        }
+
+        @include pad() {
+            flex-wrap: wrap;
+
+        }
+
+        img {
+            border-radius: 50%;
+            padding-bottom: $ps;
+        }
+
+        .present-img {
+            margin-bottom: $ms;
+        }
+    }
+
+    .present-content {
+
+        text-align: justify;
+    }
+
+}
+
+.master {
+    display: flex;
+    justify-content: space-around;
+    background: $primary;
+    margin-bottom: $mb;
+
+    .master-img {
+        padding-left: $pb;
+
+        img {
+            display: block;
+        }
+    }
+
+    .master-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-left: $pd;
+        color: $primary1;
+        text-align: justify;
+
+        h3 {
+            margin-bottom: $ms;
+        }
+
+        p {
+            font-size: $fize;
+            padding-right: 5em;
+        }
+    }
+
+    @include pad() {
+        flex-wrap: wrap;
+
+        .master-img {
+            margin-bottom: $ms;
+        }
+
+        .master-content {
+            align-items: center;
+            width: 80%;
+
+            p {
+                padding: 0;
+            }
+        }
+
+    }
+}
+
+.experience {
+    padding: $pd;
+    margin-bottom: $mb;
+
+    h3 {
+        text-align: center;
+        font-size: $fb;
+        margin-bottom: $md;
+    }
+
+    .experience-item {
+        display: flex;
+        justify-content: space-around;
+
+        .experience-img {
+            display: flex;
+            align-items: center;
+
+            p {
+                padding-left: $ps;
+            }
+
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        .experience-content {
+            padding-left: $pb1;
+
+            span {
+                display: block;
+                text-align: right;
+                color: $accent;
+            }
+        }
+    }
+}
+
+.location {
+    background: $accent4;
+
+    .location-map {
+        display: flex;
+    }
+
+    h3 {
+        text-align: center;
+        padding: $pb;
+    }
+
+    iframe {
+        width: 47%;
+        padding: $pd;
+    }
+
+    form {
+        padding: $pb;
+        width: 50%;
+
+        input,
+        label {
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: $ps 0;
+            padding-left: $ps;
+            outline: none;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            border: 1px solid $accent2;
+
+        }
+
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: $mb;
+
+            input[type="button"] {
+                margin-right: $ms;
+                outline: none;
+                border-radius: 0.3em;
+                padding: $ps $pd;
+
+            }
+
+            input[value="取消"] {
+                background: gray;
+
+            }
+
+            input[value="送出"] {
+                background: $accent1;
+
+            }
+
+        }
+    }
+}

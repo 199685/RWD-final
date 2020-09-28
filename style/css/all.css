@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -158,28 +159,27 @@ h6 {
 body {
   max-width: 1024px;
   margin: 0 auto;
+  background: #c2b8b8;
+}
+
+.header {
+  position: relative;
 }
 
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: absolute;
+  width: calc(100% - 40px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 984px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
   background: rgba(0, 0, 0, 0.75);
-}
-
-@media (max-width: 768px) {
-  .logo {
-    max-width: 100%;
-  }
 }
 
 .logo .fa-bars {
@@ -269,6 +269,7 @@ body {
           transform: translateX(-240px);
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
+  display: none;
 }
 
 .aside.open {
@@ -306,6 +307,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 414px) {
@@ -386,12 +388,18 @@ body {
 
 .footer .about .present {
   width: 50%;
+  text-align: left;
 }
 
 @media (max-width: 414px) {
   .footer .about .present {
     width: 100%;
   }
+}
+
+.footer .contact ul {
+  list-style-type: initial;
+  list-style-position: inside;
 }
 
 .footer .footer-logo {
@@ -441,5 +449,267 @@ body {
 
 .footer .fa-facebook-square {
   color: #4d4dc4;
+}
+
+.present {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.present .present-title {
+  margin-bottom: 30px;
+}
+
+.present .present-title h3 {
+  line-height: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.present .present-title h3::before {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #a09999;
+  position: relative;
+  top: 40px;
+  left: -150px;
+}
+
+.present .present-title h3::after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #a09999;
+  position: relative;
+  top: -40px;
+  right: -150px;
+}
+
+.present .present-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.present .present-item li {
+  width: 30.333%;
+}
+
+@media (max-width: 768px) {
+  .present .present-item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.present .present-item img {
+  border-radius: 50%;
+  padding-bottom: 10px;
+}
+
+.present .present-item .present-img {
+  margin-bottom: 20px;
+}
+
+.present .present-content {
+  text-align: justify;
+}
+
+.master {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #3d1101;
+  margin-bottom: 60px;
+}
+
+.master .master-img {
+  padding-left: 30px;
+}
+
+.master .master-img img {
+  display: block;
+}
+
+.master .master-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  padding-left: 20px;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.master .master-content h3 {
+  margin-bottom: 20px;
+}
+
+.master .master-content p {
+  font-size: 16px;
+  padding-right: 5em;
+}
+
+@media (max-width: 768px) {
+  .master {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .master .master-img {
+    margin-bottom: 20px;
+  }
+  .master .master-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+  }
+  .master .master-content p {
+    padding: 0;
+  }
+}
+
+.experience {
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.experience h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.experience .experience-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.experience .experience-item .experience-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experience .experience-item .experience-img p {
+  padding-left: 10px;
+}
+
+.experience .experience-item img {
+  border-radius: 50%;
+}
+
+.experience .experience-item .experience-content {
+  padding-left: 70px;
+}
+
+.experience .experience-item .experience-content span {
+  display: block;
+  text-align: right;
+  color: rgba(61, 17, 0, 0.75);
+}
+
+.location {
+  background: #fafafa;
+}
+
+.location .location-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.location h3 {
+  text-align: center;
+  padding: 30px;
+}
+
+.location iframe {
+  width: 47%;
+  padding: 20px;
+}
+
+.location form {
+  padding: 30px;
+  width: 50%;
+}
+
+.location form input,
+.location form label {
+  cursor: pointer;
+}
+
+.location form input[type="text"] {
+  width: 80%;
+  padding: 10px 0;
+  padding-left: 10px;
+  outline: none;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  border: 1px solid #efe9e7;
+}
+
+.location form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 60px;
+}
+
+.location form .btn input[type="button"] {
+  margin-right: 20px;
+  outline: none;
+  border-radius: 0.3em;
+  padding: 10px 20px;
+}
+
+.location form .btn input[value="取消"] {
+  background: gray;
+}
+
+.location form .btn input[value="送出"] {
+  background: #ff5e45;
 }
 /*# sourceMappingURL=all.css.map */
