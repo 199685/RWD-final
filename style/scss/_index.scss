@@ -24,6 +24,10 @@
                 position: relative;
                 top: 40px;
                 left: -150px;
+
+                @include sm () {
+                    display: none;
+                }
             }
 
             &::after {
@@ -36,6 +40,9 @@
                 top: -40px;
                 right: -150px;
 
+                @include sm () {
+                    display: none;
+                }
             }
         }
     }
@@ -51,6 +58,14 @@
         @include pad() {
             flex-wrap: wrap;
 
+        }
+
+        @include smb() {
+            li {
+                width: 90%;
+                margin-bottom: $ms;
+                padding: 0 5%;
+            }
         }
 
         img {
@@ -79,6 +94,10 @@
     .master-img {
         padding-left: $pb;
 
+        @include sm {
+            padding: 0;
+        }
+
         img {
             display: block;
         }
@@ -101,6 +120,11 @@
             font-size: $fize;
             padding-right: 5em;
         }
+
+        @include sm () {
+            padding: 0;
+        }
+
     }
 
     @include pad() {
@@ -136,6 +160,12 @@
         display: flex;
         justify-content: space-around;
 
+        @include smb() {
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 0 5%;
+        }
+
         .experience-img {
             display: flex;
             align-items: center;
@@ -167,6 +197,13 @@
 
     .location-map {
         display: flex;
+
+        @include smb() {
+
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     h3 {
@@ -177,11 +214,26 @@
     iframe {
         width: 47%;
         padding: $pd;
+
+
+        @include smb() {
+            width: 90%;
+            padding: 0 5%;
+        }
+
+        @include sml() {
+            height: auto;
+        }
     }
 
     form {
         padding: $pb;
         width: 50%;
+
+        @include smb() {
+            width: 80%;
+        }
+
 
         input,
         label {
@@ -197,6 +249,9 @@
             border-radius: 10px;
             border: 1px solid $accent2;
 
+            @include sm() {
+                width: 100%;
+            }
         }
 
         .btn {
@@ -204,10 +259,15 @@
             justify-content: flex-end;
             margin-right: $mb;
 
+            @include sm() {
+                margin-right: 0;
+                margin-top: $ms;
+            }
+
             input[type="button"] {
                 margin-right: $ms;
                 outline: none;
-                border-radius: 0.3em;
+                border-radius: 0.5em;
                 padding: $ps $pd;
 
             }
