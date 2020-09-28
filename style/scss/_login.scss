@@ -1,0 +1,94 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: $fb1;
+
+    }
+
+    p,
+    h2 {
+        font-weight: bold;
+    }
+
+    form {
+        margin: $mb 0;
+        border-top: 3px solid $accent1;
+        border-right: 3px solid $accent4;
+        border-bottom: 3px solid $accent4;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+        padding: $pd;
+
+        h3 {
+            text-align: center;
+            margin-bottom: $ms;
+            font-weight: bold;
+        }
+
+        a {
+            font-size: $fize;
+            color: $accent1;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #address,
+    #password {
+        width: 230px;
+        padding: 0.5em 0;
+        border-radius: 0.3em;
+        outline: none;
+        border: 1px solid $accent5;
+        padding-left: 40px;
+    }
+
+
+}
+
+.email,
+.password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fa-envelope,
+.fa-lock {
+    position: absolute;
+    padding-left: $ps;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $ms;
+
+    input {
+        padding: 0.5em $pb;
+        color: $accent2;
+        border-radius: 0.5em;
+        cursor: pointer;
+        outline: none;
+    }
+
+    input[value='註冊'] {
+        background: $accent3;
+
+        &:hover {
+            background: black;
+        }
+    }
+
+    input[value='登入'] {
+        background-color: $accent1;
+
+        &:hover {
+            background: red;
+        }
+    }
+}

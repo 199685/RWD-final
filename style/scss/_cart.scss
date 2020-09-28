@@ -1,0 +1,264 @@
+.cart {
+    display: flex;
+    padding: 0 $pb;
+
+    @include smb() {
+        flex-wrap: wrap;
+    }
+
+    .cart-nav {
+        margin-right: $md;
+
+        @include smb() {
+            width: 100%;
+            margin-bottom: $md;
+        }
+
+        h2 {
+            font-size: $fb;
+            margin-bottom: $ms;
+        }
+
+        .fa-leaf {
+            padding-right: $ps;
+        }
+
+        a {
+            color: $primary;
+            line-height: 1.5;
+            padding: $ps;
+            display: block;
+            transition: color 0.3s;
+            border-bottom: 3px solid $primary;
+
+            &:hover {
+                color: $primary1;
+                background: $primary;
+                border-bottom: 3px solid $accent1;
+            }
+
+        }
+
+        li:nth-child(4) a {
+            color: $primary1;
+            background: $primary;
+            border-bottom: 3px solid $accent1;
+        }
+    }
+
+    .cart-content {
+        width: 70%;
+
+        @include smb() {
+            width: 100%;
+        }
+    }
+
+    .cart-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $md;
+
+        @include pad() {
+            flex-wrap: wrap;
+        }
+
+        @include smb() {
+            width: 100%;
+        }
+    }
+
+    .cart-search {
+        width: 70%;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include pad() {
+            width: 100%;
+            margin-bottom: $ms;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.4em;
+            outline: solid $primary;
+            background: #c2b8b8;
+        }
+
+        .fa-search {
+            position: absolute;
+            right: 0;
+            padding: 0.3em;
+            background: $primary;
+            color: $primary1;
+            cursor: pointer;
+        }
+    }
+
+    .cart-checkout {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover .fa-shopping-cart {
+            transform: scale(1.5);
+        }
+
+        p {
+            padding-right: $pb;
+
+            &:after {
+                content: "";
+                border-right: 3px solid $primary;
+                padding-right: $pb;
+            }
+        }
+
+        .fa-shopping-cart {
+            transition: transform 0.3s;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: -8px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: $accent1;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .cart-item {
+        display: flex;
+        flex-wrap: wrap;
+
+
+        li {
+            width: 47%;
+            margin: 0 1%;
+            margin-bottom: $md;
+            border-right: 1px solid $accent2;
+            border-bottom: 1px solid $accent2;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+            position: relative;
+            overflow: hidden;
+
+            @include smb() {
+                width: 96%;
+            }
+
+            &:nth-child(1) .cart-img {
+                background: url(../../images/product_1.png) center center;
+                background-size: cover;
+                height: 120px;
+            }
+
+            &:nth-child(2) .cart-img {
+                background: url(../../images/product_2.png) center center;
+                background-size: cover;
+                height: 120px;
+            }
+
+            &:nth-child(3) .cart-img {
+                background: url(../../images/product_3.png) center center;
+                background-size: cover;
+                height: 120px;
+            }
+
+            &:nth-child(4) .cart-img {
+                background: url(../../images/product_4.png) center center;
+                background-size: cover;
+                height: 120px;
+
+                .fa-heart {
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+
+
+        .cart-img {
+            display: flex;
+            justify-content: space-between;
+
+            .ribbon {
+                transform: rotate(45deg);
+                position: relative;
+                top: 30px;
+                left: 30px;
+                width: 150px;
+                background: #00CC99;
+                z-index: 1;
+                text-align: center;
+                color: $accent4;
+
+            }
+
+            .fa-heart {
+                padding: $ps;
+                color: $primary1;
+                cursor: pointer;
+                transition: font-weight .5s;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .cart-cost {
+            display: flex;
+            flex-direction: column;
+            padding: $ps;
+            text-align: center;
+            position: relative;
+            justify-content: center;
+
+            h3 {
+                margin-bottom: $md;
+
+            }
+
+            &:after {
+                content: "";
+                border-bottom: 2px solid $primary;
+                width: 150px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: translateY(-35px)
+            }
+
+            span {
+                margin-bottom: $ms;
+                font-family: Roboto-Light;
+                font-size: $fb;
+                font-weight: bold;
+            }
+
+            .fa-shopping-cart {
+                border: 2px solid $accent1;
+                padding: $ps;
+                color: $accent1;
+                transition: all .3s;
+                cursor: pointer;
+                border-radius: 8px;
+
+                &:hover {
+                    background: $accent1;
+                    color: $accent5;
+                }
+            }
+        }
+    }
+
+
+}

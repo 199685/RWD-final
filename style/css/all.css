@@ -798,4 +798,424 @@ body {
 .location form .btn input[value="送出"] {
   background: #ff5e45;
 }
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+}
+
+@media (max-width: 767px) {
+  .cart {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.cart .cart-nav {
+  margin-right: 30px;
+}
+
+@media (max-width: 767px) {
+  .cart .cart-nav {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.cart .cart-nav h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cart .cart-nav .fa-leaf {
+  padding-right: 10px;
+}
+
+.cart .cart-nav a {
+  color: #3d1101;
+  line-height: 1.5;
+  padding: 10px;
+  display: block;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  border-bottom: 3px solid #3d1101;
+}
+
+.cart .cart-nav a:hover {
+  color: #ffffff;
+  background: #3d1101;
+  border-bottom: 3px solid #ff5e45;
+}
+
+.cart .cart-nav li:nth-child(4) a {
+  color: #ffffff;
+  background: #3d1101;
+  border-bottom: 3px solid #ff5e45;
+}
+
+.cart .cart-content {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  .cart .cart-content {
+    width: 100%;
+  }
+}
+
+.cart .cart-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .cart .cart-title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart .cart-title {
+    width: 100%;
+  }
+}
+
+.cart .cart-search {
+  width: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .cart .cart-search {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.cart .cart-search input {
+  width: 100%;
+  padding: 0.4em;
+  outline: solid #3d1101;
+  background: #c2b8b8;
+}
+
+.cart .cart-search .fa-search {
+  position: absolute;
+  right: 0;
+  padding: 0.3em;
+  background: #3d1101;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cart .cart-checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.cart .cart-checkout:hover .fa-shopping-cart {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.cart .cart-checkout p {
+  padding-right: 30px;
+}
+
+.cart .cart-checkout p:after {
+  content: "";
+  border-right: 3px solid #3d1101;
+  padding-right: 30px;
+}
+
+.cart .cart-checkout .fa-shopping-cart {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  position: relative;
+}
+
+.cart .cart-checkout .fa-shopping-cart span {
+  position: absolute;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff5e45;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cart .cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cart .cart-item li {
+  width: 47%;
+  margin: 0 1%;
+  margin-bottom: 30px;
+  border-right: 1px solid #efe9e7;
+  border-bottom: 1px solid #efe9e7;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .cart .cart-item li {
+    width: 96%;
+  }
+}
+
+.cart .cart-item li:nth-child(1) .cart-img {
+  background: url(../../images/product_1.png) center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.cart .cart-item li:nth-child(2) .cart-img {
+  background: url(../../images/product_2.png) center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.cart .cart-item li:nth-child(3) .cart-img {
+  background: url(../../images/product_3.png) center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.cart .cart-item li:nth-child(4) .cart-img {
+  background: url(../../images/product_4.png) center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.cart .cart-item li:nth-child(4) .cart-img .fa-heart {
+  font-weight: bold;
+}
+
+.cart .cart-item .cart-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart .cart-item .cart-img .ribbon {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  top: 30px;
+  left: 30px;
+  width: 150px;
+  background: #00CC99;
+  z-index: 1;
+  text-align: center;
+  color: #fafafa;
+}
+
+.cart .cart-item .cart-img .fa-heart {
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: font-weight .5s;
+  transition: font-weight .5s;
+}
+
+.cart .cart-item .cart-img .fa-heart:hover {
+  font-weight: bold;
+}
+
+.cart .cart-item .cart-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart .cart-item .cart-cost h3 {
+  margin-bottom: 30px;
+}
+
+.cart .cart-item .cart-cost:after {
+  content: "";
+  border-bottom: 2px solid #3d1101;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.cart .cart-item .cart-cost span {
+  margin-bottom: 20px;
+  font-family: Roboto-Light;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cart .cart-item .cart-cost .fa-shopping-cart {
+  border: 2px solid #ff5e45;
+  padding: 10px;
+  color: #ff5e45;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.cart .cart-item .cart-cost .fa-shopping-cart:hover {
+  background: #ff5e45;
+  color: wheat;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login h2 {
+  font-size: 48px;
+}
+
+.login p,
+.login h2 {
+  font-weight: bold;
+}
+
+.login form {
+  margin: 60px 0;
+  border-top: 3px solid #ff5e45;
+  border-right: 3px solid #fafafa;
+  border-bottom: 3px solid #fafafa;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+}
+
+.login form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login form a {
+  font-size: 16px;
+  color: #ff5e45;
+}
+
+.login form a:hover {
+  text-decoration: underline;
+}
+
+.login #address,
+.login #password {
+  width: 230px;
+  padding: 0.5em 0;
+  border-radius: 0.3em;
+  outline: none;
+  border: 1px solid wheat;
+  padding-left: 40px;
+}
+
+.email,
+.password {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fa-envelope,
+.fa-lock {
+  position: absolute;
+  padding-left: 10px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn input {
+  padding: 0.5em 30px;
+  color: #efe9e7;
+  border-radius: 0.5em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn input[value='註冊'] {
+  background: #4a4a4a;
+}
+
+.btn input[value='註冊']:hover {
+  background: black;
+}
+
+.btn input[value='登入'] {
+  background-color: #ff5e45;
+}
+
+.btn input[value='登入']:hover {
+  background: red;
+}
 /*# sourceMappingURL=all.css.map */
