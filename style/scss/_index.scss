@@ -108,7 +108,7 @@
         flex-direction: column;
         justify-content: center;
         width: 50%;
-        padding-left: $pd;
+        padding: 0 0 $pd $pd;
         color: $primary1;
         text-align: justify;
 
@@ -273,13 +273,19 @@
             }
 
             input[value="取消"] {
-                background: gray;
+                background: $accent3;
 
+                &:hover {
+                    background: black;
+                }
             }
 
             input[value="送出"] {
                 background: $accent1;
 
+                &:hover {
+                    background: red;
+                }
             }
 
         }

@@ -1,0 +1,104 @@
+.registes-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: $md;
+
+    h2 {
+        font-size: $fb1;
+    }
+}
+
+
+.registes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $mb;
+}
+
+.registes-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 3px solid $accent1;
+    border-right: 3px solid $primary1;
+    border-bottom: 3px solid $primary1;
+    width: 70%;
+    padding-bottom: $pd;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.75);
+
+    @include sm() {
+        width: 90%;
+    }
+
+    >h3 {
+        width: 100%;
+        text-align: center;
+        margin: $ms 0;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: justify;
+        word-spacing: -8px;
+
+        @include pad() {
+            margin-bottom: $ms;
+        }
+    }
+
+}
+
+.legend,
+.registes-area {
+    width: 40%;
+    margin: 0 2%;
+
+    @include pad() {
+        width: 80%;
+    }
+
+    @include sm() {
+        width: 90%;
+    }
+
+}
+
+.registes-area {
+
+
+    input[type="text"] {
+        width: 100%;
+        padding: $ps 0 $ps $pb;
+        border-radius: 0.5em;
+        margin-bottom: $ms;
+        transform: translateY(8px);
+        border: 1px solid $accent5;
+        outline: none;
+    }
+
+    >a {
+        color: $accent1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+}
+
+.btn.new {
+    direction: rtl;
+
+
+
+    input[value='註冊'] {
+        background: $accent1;
+
+        &:hover {
+            background: red;
+        }
+    }
+}
